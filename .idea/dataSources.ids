@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="683c7466-5897-4da6-a919-50b4310ccf46">
+    <database-info product="MySQL" version="5.5.43-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="ota"/>
+    <table name="action_log" schema="" catalog="ota" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="action_time" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="action_type" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" def="LTE="/>
+      <column name="package_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE=" remarks="Pz8/aWQ="/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE=" remarks="Pz8/P2lk"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="channel_manager" schema="" catalog="ota" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="addtime" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="title" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12" def="Jyc=" remarks="Pz8/"/>
+      <column name="code" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE=" remarks="Pz8/"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE=" remarks="5YWz6IGU55So5oi3aWQ="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tbl_manager_permission" schema="" catalog="ota" type="TABLE">
+      <column name="PID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="pname" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" def="Jyc=" remarks="5p2D6ZmQ5ZCN"/>
+      <column name="url" sqlType="VARCHAR" length="1024" precision="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="addtime" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <primary-key name="PRIMARY" columns="PID"/>
+    </table>
+    <table name="tbl_manager_role" schema="" catalog="ota" type="TABLE">
+      <column name="RID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="rname" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" def="Jyc=" remarks="6KeS6Imy5ZCN"/>
+      <column name="addtime" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <primary-key name="PRIMARY" columns="RID"/>
+    </table>
+    <table name="tbl_manager_role_permission" schema="" catalog="ota" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="RID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="LTE="/>
+      <column name="PID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="LTE="/>
+      <column name="addtime" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="tbl_manager_user" schema="" catalog="ota" type="TABLE">
+      <column name="UID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" def="Jyc=" remarks="55So5oi35ZCN"/>
+      <column name="pass" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" def="Jyc=" remarks="5a+G56CB"/>
+      <column name="display" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="statu" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6" def="MA==" remarks="55So5oi354q25oCB"/>
+      <column name="addtime" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="5Lqn55Sf5pe26Ze0" version="true"/>
+      <primary-key name="PRIMARY" columns="UID"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="pass" unique="false" columns="pass"/>
+    </table>
+    <table name="tbl_manager_user_role" schema="" catalog="ota" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="UID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="LTE="/>
+      <column name="RID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="LTE="/>
+      <column name="addtime" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="user" schema="" catalog="ota" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>
