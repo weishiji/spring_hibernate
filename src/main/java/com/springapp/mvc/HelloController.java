@@ -28,8 +28,8 @@ public class HelloController {
         Gson gson = new Gson();
         String jsonStr = gson.toJson(results);
 
-        model.addAttribute("message", jsonStr);
-
+        //model.addAttribute("message", jsonStr);
+        model.put("message",results);
        // this.testConnection(al);
         return "hello";
 	}

@@ -29,8 +29,14 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
         </dependency>
+		<!--jsp template -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
-        <dependency>
+		<dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
             <version>2.1</version>
